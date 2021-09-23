@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>543</width>
-    <height>116</height>
+    <width>759</width>
+    <height>163</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
       <bool>true</bool>
      </property>
      <property name="digitCount">
-      <number>5</number>
+      <number>7</number>
      </property>
     </widget>
    </item>

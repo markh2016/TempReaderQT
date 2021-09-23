@@ -22,9 +22,34 @@ void setup(void)
 } 
 void loop(void) 
 { 
- sensors.requestTemperatures();
+
+  String SerialData="";
+  
+  sensors.requestTemperatures();
+  
   double temp = sensors.getTempCByIndex(0);
-  Serial.print(temp);
+  // Convert double to string 
+  SerialData = String(temp ,2) ;
+
+  // Concat C to string 
+  SerialData.concat(" C") ;
+
+  // now send this out on the serial port 
+  Serial.print(SerialData) ;
+
+    
+  delay(1000) ;
+  temp = sensors.getTempFByIndex(0);
+  // Convert double to string 
+  SerialData = String(temp ,2);
+  SerialData.concat(" F") ;
+
+  // now send this out on the serial port 
+  
+  Serial.print(SerialData);
+  
   Serial.flush();
+
+  
   delay(1000);
 } 
